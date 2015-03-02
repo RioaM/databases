@@ -7,15 +7,26 @@ var Sequelize = require("sequelize");
 var sequelize = new Sequelize("chatter", "root", "");
 /* TODO this constructor takes the database name, username, then password.
  * Modify the arguments if you need to */
+ var sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'localhost',
+  dialect: 'mysql',
+
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  }
+});
 
 /* first define the data structure by giving property names and datatypes
  * See http://sequelizejs.com for other datatypes you can use besides STRING. */
-var User = sequelize.define('User', {
+var Friends = sequelize.define('friends', {
   username: Sequelize.STRING
+  friend: Sequelize.STRING
 });
 
-var Message = sequelize.define('Message' {
-  userid: Sequelize.INTEGER,
+var Messages = sequelize.define('messages' {
+  username: Sequelize.INTEGER,
   text: Sequelize.STRING,
   roomname: Sequelize.STRING
 });

@@ -1,0 +1,45 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
+
+    <!-- dependencies -->
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+   <!-- <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <!-- your scripts --
+    <script src="env/config.js"></script>
+    <script src="scripts/app.js"></script>!-->
+  </head>
+  <body>
+    <div id="main">
+      <h1>chatterbox</h1>
+      <label>Chat Rooms:</label>
+      <script>
+
+     var myFirebaseRef = new Firebase("https://todaystodolist.firebaseio.com/");
+   </script>
+    </div>
+    <div id="wrapper">
+      <button id='chat'>Refresh Chat</button>
+      <button id='newRoom'>Create a new room</button>
+      <form id='message'>
+          Username:
+          </br>
+          <input type="text" name='username'>
+          </br>
+          Message:
+          </br>
+          <input type="text" rows="2" cols="49" name='message'>
+          </br>
+          <input type="submit">
+          <input type="reset" value="Reset">
+      </form>
+    </div>
+      <div id="wrapper2"></div>
+  </body>
+</html>
